@@ -26,7 +26,7 @@ class UserController extends AbstractController
     private $password;
     #[ORM\Column(type: 'string', length: 255)]
     public $role;
-    #[ORM\Column(type: 'datetime_immutable')]
+    #[ORM\Column(type: 'datetime')]
     public $createdAt;
 
     #[Route('/', name: 'user.index', methods: ['GET'])]
