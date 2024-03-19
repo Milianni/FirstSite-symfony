@@ -1,0 +1,24 @@
+<?php 
+require_once "./partials/_header.html.twig";
+use App\Entity;
+use App\UserController;
+use App\Entity\Connection;
+
+$id= new Connection();
+$id= $id->getId();
+
+?>
+<div class="containner">
+    <h1 class="text-align-center">Se Connecter</h1>
+    <form action="" method="post"> 
+        <div class="from-control">
+        <input type="id" class="id" name="id" ><?= $id ?> 
+        <input type='text' class='name'name='userName' placeholder="Entré votre nom">
+        <input type='password' class='password'name='password' placeholder="Entré votre mot de passe">
+        <input type='user' class='user'name='userProfil' placeholder="Entré votre nom de Profile">
+        <input type='email' class='email'name='email' placeholder="Entré votre adresse email">
+        </div> 
+        <button type ='buttom' class="btn btn-primary" id='sumit'>Envoyer</button> 
+
+    </form>
+</div>

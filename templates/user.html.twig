@@ -1,0 +1,36 @@
+{% extends './partials/_header.html.twig' %}
+
+{% block title %}Connection espace perso {% endblock %}
+
+{% block body %}
+ <body class="text-center">
+    <form class="form-signin" method="post" action="{{ path('login') }}">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus name="email">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password"> 
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Se Connectez</h1>
+                <form method="post" action="{{ path('login') }}">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    {% if errors.email %}
+                        "Erreur email"
+                    {% endif %}
+                            <span class="help-block">{{ errors.email }}</span>     
+         
+
+
+        <h1>Se Connectez</h1>
+        {% include './../public/connection.php'%}
+    
+  
+{% endblock %}
