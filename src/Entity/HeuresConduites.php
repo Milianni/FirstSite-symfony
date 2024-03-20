@@ -22,7 +22,7 @@ class HeuresConduites
     #[ORM\Column(type: 'integer')]
     private ?int $idMonuteur = null;
 
-    #[ORM\Column(type: 'Datetime_immutable')]
+    #[ORM\Column(type: 'datetime')]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE, nullable: true)]
@@ -31,13 +31,13 @@ class HeuresConduites
     #[ORM\Column(type: 'float')]
     #[Assert\NotNull("can not be null :/")]
     #[Assert\Positive()]
-    #[Assert\Notblank()]
+    #[Assert\NotBlank()]
     #[Assert\LessThan(200)]
     private ?float $prix = null;
 
     #[ORM\Column(type: 'integer')]
     private ?int $numberHeureTotal;
-    #[ORM\Column(type: 'datetime_immutable')]
+    #[ORM\Column(type: 'datetime')]
     #[assert\NotNull()]
     private $createdAt;
     /**
